@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+
+    <div>  
+        <!-- <Label>Your Text</Label><BR> -->
+        <textarea name="" id="inp1" cols="50" rows="10" placeholder="TEXT YOU ADD"></textarea>
+  <select name="" id="sel">
+    <option value="u">UpperCase</option>
+    <option value="l">LowerCase</option>
+    <option value="f">First Letter Capital</option>
+  </select>
+  <textarea name="" id="inp2" cols="50" rows="10" placeholder="Converted TEXT "></textarea>
+  <!-- <Label>Converted Text</Label> -->
+        <p id="demo"></p>
+        <button onclick="cl()">Clear</button>
+        <button onclick="fn2()">Convert</button>
+    </div>
+    <div>
+        <BR>
+        <input type="text" name="" id="table" placeholder="Enter A Number For Table">
+        <button onclick="fn()"  id="submitBtn">Table</button>
+        <button onclick="cl()">Clear</button>
+        <p id="demo"></p>
+       </div>
+    </body>
+<script>
+function cl(){
+    location.reload()
+}
+    function fn()
+    {
+        var a=document.getElementById("table").value;
+    var b;
+        for(let i=0;i<=10;i++){
+// b=c
+console.log(i)      
+document.getElementById("demo").innerHTML+= a +" X "+i +"="+i*a +"<BR>"
+            
+        }
+  
+    }
+    document.addEventListener("keydown", function() {
+            // Check if the pressed key is "Enter"
+            if (event.key === "Enter") {
+                // Prevent the default action if needed
+                event.preventDefault();
+                // Trigger a click on the submit button
+                document.getElementById("submitBtn").click();
+            }
+        });
+       
+        var e;   
+        var g;
+        var z;
+        var x;
+        function fn2(){
+            var c=document.getElementById("inp1").value
+            var f=document.getElementById("inp2")
+            
+            var d=document.getElementById("sel").value;
+    console.log(d)
+        if(d == "u"){
+        e=c.toUpperCase();
+        f.innerHTML=e
+        console.log(e)
+        }
+        else if(d == "l"){
+        e=c.toLowerCase();
+        f.innerHTML=e
+        console.log(e)
+        }
+        else if(d == "f"){
+           g=c.split(" ")
+           //    e=c.charAt(0).toLocaleUpperCase()+c.slice(1,c.length)
+           // f.innerHTML=e
+           for(let i=0 ;i<g.length;i++ ){
+            //    z=g[i][0].toUpperCase()
+        z=g
+        x=g[i][0].toUpperCase()+z[i].slice(1)
+                f.innerHTML+= " "+x
+                console.log(x)
+        }}
+        else{
+            console.log("Nothinf")
+        }
+    }
+//     var num=0;
+//     var img=document.getElementById("i");
+//     var sp=document.getElementById("sp");
+//     var s=document.getElementById("sp")
+//     var n=0;
+//     function on(){
+//         if(num == 0){
+//          img.src = "on.png"
+//          num=1
+//          sp.classList.add("m")
+//         //  sp.style.right="0px"
+// n = 1;
+// console.log(n+" if "+sp.style )
+//         }
+//         else{
+//             img.src = "off.png"
+//             num=0;
+//             sp.classList.remove("m")
+//         // sp.style.left="-20px"
+//         n=0;
+//         console.log(n+" else "+ sp)
+//     }
+
+//     }
+
+</script>
+</html>
